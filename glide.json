@@ -1,9 +1,8 @@
-
 [
   {
     "kind": "column",
-    "name": "OpenAI (Assistants)",
-    "description": "Create, modify and run OpenAI Assistants.",
+    "name": "Generate OpenAI Image",
+    "description": "Generate an image using OpenAI's DALL-E API, with optional response format, quality, and style settings.",
     "author": "Gavin Horne <gavin@thinknetwork.com.au>",
     "params": [
       {
@@ -12,18 +11,43 @@
         "type": "string"
       },
       {
-        "name": "endpoint",
-        "displayName": "API Endpoint (Required)",
+        "name": "model",
+        "displayName": "Model (Required, e.g., dall-e-3)",
         "type": "string"
       },
       {
-        "name": "body",
-        "displayName": "Body (JSON Schema Required)",
+        "name": "prompt",
+        "displayName": "Prompt (Required, Image Description)",
         "type": "string"
       },
       {
-        "name": "json",
-        "displayName": "JSON Schema (Output)",
+        "name": "n",
+        "displayName": "Number of Images (Optional, Default: 1)",
+        "type": "number"
+      },
+      {
+        "name": "size",
+        "displayName": "Image Size (Optional, e.g., 1024x1024)",
+        "type": "string"
+      },
+      {
+        "name": "response_format",
+        "displayName": "Response Format (Optional, url/b64_json)",
+        "type": "string"
+      },
+      {
+        "name": "user",
+        "displayName": "User ID (Optional, Custom Identifier)",
+        "type": "string"
+      },
+      {
+        "name": "quality",
+        "displayName": "Image Quality (Optional, standard/hd)",
+        "type": "string"
+      },
+      {
+        "name": "style",
+        "displayName": "Image Style (Optional, vivid/natural)",
         "type": "string"
       }
     ],
